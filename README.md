@@ -1,2 +1,2 @@
 # AuctionSystem
-Please use the AuctionSystem.pptx as a guide to using the project
+Please use the Auction System.pptx as a guide to using the project
