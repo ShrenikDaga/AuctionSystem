@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AuctionSystem3.Controllers.ProductBid>
+@{
+    ViewData["Title"] = "ViewBids";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Here are all the bids:</h1>
+
+<div class="all-bids-display">
+    @foreach (var item in Model)
+    {
+        <div class="product-item">
+            <h3>@item.product.Name with base price @item.product.InitialPrice</h3>
+            @foreach (var bid in item.bid)
+            {
+                <div class="bidView">
+                    <h5>@bid.BidderName - @bid.BidAmount - @bid.BidDate</h5>
+                </div>
+                <div class="bidView">
+                        <a asp-action="DeleteBid" asp-route-id="@bid.BidsID">Delete</a>
+                </div>
+             }
+        </div>
+    }
+</div>
+

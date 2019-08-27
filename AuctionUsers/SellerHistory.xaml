@@ -1,0 +1,45 @@
+﻿<Page x:Class="AuctionUsers.SellerHistory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AuctionUsers"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SellerHistory">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" x:Name="FieldsListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Image Height="250" Width="100" Source="{Binding image}"></Image>
+                        <Button Height="20" Width="50" Click="Button_Click" Content="{Binding name}" Tag="{Binding id}"></Button>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel IsItemsHost="True" Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <Label Grid.Column="1" Grid.Row="0" Content="Id  Amount  Name"></Label>
+        <ListBox Grid.Column="1" Grid.Row="1" Name="DetailsListBox" Margin="0,30,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        
+                        <Label Content="{Binding sellerId}"></Label>
+                        <Label Content="{Binding bidAmount}"></Label>
+                        <Label Content="{Binding bidderName}"></Label>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

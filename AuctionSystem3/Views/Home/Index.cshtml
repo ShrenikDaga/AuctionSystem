@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <h3>Welcome Admin</h3>
+    </p>
+
+    <p>
+        <a asp-action="ViewBids">View all bids</a>
+    </p>
+}
+
+@if (User.IsInRole("User"))
+{
+    <p>
+        <h3>Welcome User</h3>
+        <h4>Register yourself as either Bidder or Seller:</h4>
+        <a asp-action="RegisterAsSeller">Register as seller</a>
+        <a asp-action="RegisterAsBidder">Register as bidder</a>
+    </p>
+
+}
+

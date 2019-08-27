@@ -1,0 +1,23 @@
+﻿<NavigationWindow x:Class="AuctionUsers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuctionUsers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Source="UserPage.xaml">
+    <!--<Grid Margin="0,0,0,325">
+        <TextBlock Margin="0,0,0,70">Please enter your BidderID:</TextBlock>
+        <RichTextBox Margin="2,23,468,37"></RichTextBox>
+        <Button Margin="2,68,694,-14" Click="Button_Click_Bidder">Go</Button>
+
+
+        <TextBlock Margin="0,195,543,-127">Please enter your SellerID:</TextBlock>
+        <RichTextBox Margin="0,226,569,-171"></RichTextBox>
+        <Button Margin="0,283,689,-225" Click="Button_Click_Seller">Go</Button>
+
+        <TextBlock Margin="343,11,10,10">If you dont have the ID, please register yourself through the following:</TextBlock>
+    </Grid>-->
+    
+    
+</NavigationWindow>
